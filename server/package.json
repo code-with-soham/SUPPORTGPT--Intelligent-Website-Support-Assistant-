@@ -1,0 +1,20 @@
+{
+  "name": "supportgpt",
+  "version": "1.0.0",
+  "description": "Intelligent Website Assistance Chantbot",
+  "homepage": "https://github.com/code-with-soham/SUPPORTGPT--Intelligent-Website-Support-Assistant-#readme",
+  "bugs": {
+    "url": "https://github.com/code-with-soham/SUPPORTGPT--Intelligent-Website-Support-Assistant-/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/code-with-soham/SUPPORTGPT--Intelligent-Website-Support-Assistant-.git"
+  },
+  "license": "MIT",
+  "author": "Soham Kundu",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm build"
+  }
+}
