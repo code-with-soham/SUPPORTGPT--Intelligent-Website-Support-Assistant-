@@ -8,9 +8,9 @@ const path = require("path");
 require("dotenv").config();
 
 const config = require("./config");
-const Visitor = require("./models/Visitor");
-const Conversation = require("./models/Conversation");
-const Message = require("./models/Message");
+const Visitor = require("./model/Visitor");
+const Conversation = require("./model/Conversation");
+const Message = require("./model/Message");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -463,7 +463,8 @@ app.get("/api/conversations/:id", async (req, res) => {
 const frontendBuildPath = path.join(__dirname, "..", "frontend", "dist");
 app.use(express.static(frontendBuildPath));
 
-app.get("*", (req, res, next) => {
+// Express 5+ requires a valid path pattern; use a regexp catch-all instead of "*".
+app.get(/.*/, (req, res, next) => {
   if (req.path.startsWith("/api")) {
     return next();
   }
